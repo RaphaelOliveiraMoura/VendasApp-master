@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="220dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="2dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_product"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:src="@drawable/not_found"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kit Presente Malbec Sport"
+                android:fontFamily="serif-monospace"
+                android:textAlignment="textStart"
+                android:layout_below="@id/iv_product"
+                android:textStyle="bold"
+                android:textSize="12dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_price_sale_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_product_name">
+
+                <br.raphael.app.views.TextViewPrice
+                    android:id="@+id/tv_product_sale_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 22,80"
+                    android:fontFamily="serif-monospace"
+                    android:textAlignment="textStart"
+                    android:textSize="16dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignStart="@id/tv_product_sale_price"
+                    android:layout_alignEnd="@id/tv_product_sale_price"
+                    android:backgroundTint="@color/black"
+                    android:background="@drawable/line_decorator"/>
+
+            </RelativeLayout>
+
+
+            <br.raphael.app.views.TextViewPrice
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 22,80"
+                android:fontFamily="serif-monospace"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:layout_below="@id/rl_price_sale_container"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

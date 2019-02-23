@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "344882283762",
+    "firebase_url": "https://raphael-vendasapp.firebaseio.com",
+    "project_id": "raphael-vendasapp",
+    "storage_bucket": "raphael-vendasapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344882283762:android:9544952ca9fdba2c",
+        "android_client_info": {
+          "package_name": "br.raphael.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344882283762-j1b97b12c2c2lp6mim53kb39e9n9o8aj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2YfNbd8lQyJ2rGIz0tlYN-5MkiNNg5s0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

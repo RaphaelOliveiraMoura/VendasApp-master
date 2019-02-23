@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Animation background -->
+        <me.ibrahimsn.particle.ParticleView
+            android:id="@+id/particle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:particleCount="5"
+            app:minParticleRadius="2"
+            app:maxParticleRadius="6"
+            app:particleColor="@android:color/holo_blue_light"
+            app:backgroundColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="36dp"
+            android:background="@color/tranparent_80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/et_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="serif-monospace"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="E-mail"
+                    app:met_floatingLabelAnimating="true" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    android:fontFamily="serif-monospace"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="Senha"
+                    app:met_floatingLabelAnimating="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_login"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="16dp"
+                        android:text="Entrar"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="serif-monospace"
+                        app:spinning_bar_width="2dp"
+                        app:spinning_bar_color="@color/colorAccent"
+                        app:spinning_bar_padding="6dp"
+                        app:initialCornerAngle="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/btn_login"
+                        android:fontFamily="serif-monospace"
+                        android:text="Esqueci minha senha"
+                        android:textSize="12dp"
+                        android:layout_margin="2dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="26dp">
+                    
+                    <Button
+                        android:id="@+id/btn_google_login"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_google"
+                        android:background="@drawable/bg_btn_social_networks"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Entrar com Google"
+                        android:textSize="8dp"
+                        android:textAllCaps="false"
+                        android:layout_margin="4dp"
+                        android:stateListAnimator="@null"
+                        android:elevation="2dp"/>
+
+                    <Button
+                        android:id="@+id/btn_facebook_login"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_facebook"
+                        android:background="@drawable/bg_btn_social_networks"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Entrar com Facebook"
+                        android:textSize="8dp"
+                        android:fontFamily="serif-monospace"
+                        android:textAllCaps="false"
+                        android:layout_margin="4dp"
+                        android:stateListAnimator="@null"
+                        android:elevation="2dp"/>
+
+                </LinearLayout>
+
+                <!-- Line Decorator -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/line_decorator"/>
+
+                <!-- SignUp -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Não tem cadastro ?"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="8dp"
+                    android:textStyle="bold"/>
+                <Button
+                    android:id="@+id/btn_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_btn_signup"
+                    android:fontFamily="serif-monospace"
+                    android:text="Cadastrar-se" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="serif-monospace"
+            android:text="Powered by Raphael"
+            android:textSize="8dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+</layout>
